@@ -64,7 +64,7 @@
       document.body.style.backgroundImage = `url(${backgrounds[weather] || backgrounds.Default})`;
     }
 
-   /* function fetchWeather(lat, lon) {
+   function fetchWeather(lat, lon) {
       axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`)
         .then(response => {
           const data = response.data;
@@ -86,21 +86,8 @@
           document.getElementById('location').textContent = 'Error fetching weather data.';
           console.error(err);
         });
-    }*/
-function fetchWeather = (lat, lon) => {
-  console.log("Using placeholder data...");
-  const placeholderData = {
-    name: "Test Location",
-    weather: [{ main: "Clear", description: "clear sky", icon: "01d" }],
-    main: { temp: 72, temp_max: 75, temp_low: 60 },
-  };
-  // Simulate successful weather display
-  const { name } = placeholderData;
-  const { main, description } = placeholderData.weather[0];
-  const temp = placeholderData.main.temp;
-  document.getElementById("location").textContent = name || "";
-  document.getElementById("temperature").textContent = `${temp}`;
-};
+    }
+    
     function getUserLocation() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
