@@ -54,11 +54,11 @@
 
     function setDynamicBackground(weather) {
       const backgrounds = {
-        Clear: 'https://unsplash.com/photos/VRb54y8JgrA/download?force=true',
-        Clouds: 'https://unsplash.com/photos/IqQwZnm5CwQ/download?force=true',
-        Rain: 'https://unsplash.com/photos/d4sJ5_MCWsE/download?force=true',
-        Snow: 'https://unsplash.com/photos/t5YUoHW6zRo/download?force=true',
-        Thunderstorm: 'https://unsplash.com/photos/n2NcKUAojZ0/download?force=true',
+        Clear: './sunny.webp',
+        Clouds: './cloudy.webp',
+        Rain: './rain.webp',
+        Snow: './snow.webp',
+        Thunderstorm: './thunderstorm.webp',
         Default: 'https://unsplash.com/photos/MYbhN8KaaEc/download?force=true',
       };
       document.body.style.backgroundImage = `url(${backgrounds[weather] || backgrounds.Default})`;
